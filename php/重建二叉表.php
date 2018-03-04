@@ -14,6 +14,7 @@ function reConstructBinaryTree($pre, $vin)
     if (count($pre) === 0 || count($vin) === 0) {
         return null;
     }
+
     $root        = new TreeNode($pre[0]);
     $leftLen     = array_search($pre[0], $vin);
     $rightLen    = count($vin) - $leftLen - 1;
